@@ -79,6 +79,9 @@ Hunting queries are included under `hunting/` to proactively identify suspicious
 - Destructive actions (delete operations)
 - Admin activity bursts (automation/compromise signal)
 
+## Threat Scenarios
+Detailed threat investigation scenarios are documented in `threat_scenarios.md`.
+
 
 \## Disclaimer
 
