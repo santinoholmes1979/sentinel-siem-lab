@@ -50,6 +50,20 @@ This project demonstrates a hands-on Microsoft Sentinel SIEM lab: enabling Azure
 
 \- \*\*Real rule\*\*: detects repeated failed Azure operations within a short window
 
+## Detection Scenario
+
+This lab demonstrates detection of repeated Azure control-plane operation failures using Microsoft Sentinel.
+
+### Threat Context
+Repeated failed Azure control-plane actions may indicate:
+
+- Privilege escalation attempts
+- Unauthorized automation scripts
+- Credential misuse
+- Misconfigured service principals
+
+### Detection Logic (KQL)
+
 
 ## Evidence
 
