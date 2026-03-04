@@ -82,6 +82,17 @@ Hunting queries are included under `hunting/` to proactively identify suspicious
 ## Threat Scenarios
 Detailed threat investigation scenarios are documented in `threat_scenarios.md`.
 
+## MITRE ATT&CK Mapping
+
+The detection rules and hunting queries in this lab align with several MITRE ATT&CK techniques relevant to cloud environments.
+
+| Scenario | MITRE Technique | Description |
+|--------|--------|--------|
+| Failed Administrative Operations | T1078 – Valid Accounts | Attackers using compromised credentials may generate repeated failed operations while probing permissions. |
+| Privilege / Role Changes | T1098 – Account Manipulation | Unauthorized role assignments or permission changes can indicate privilege escalation. |
+| Resource Deletion | T1485 – Data Destruction | Malicious deletion of resources may indicate attempts to destroy evidence or disrupt operations. |
+| Administrative Activity Burst | T1087 – Account Discovery | High volumes of control-plane actions can indicate enumeration of Azure resources. |
+
 
 \## Disclaimer
 
