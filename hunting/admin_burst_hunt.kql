@@ -1,0 +1,5 @@
+﻿AzureActivity
+| where TimeGenerated > ago(24h)
+| summarize Ops=count(), DistinctOps=dcount(OperationNameValue) by Caller, bin(TimeGenerated, 15m)
+| where Ops > 10 or DistinctOps > 8
+| sort by Ops desc

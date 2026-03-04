@@ -1,4 +1,4 @@
-\# Microsoft Sentinel SIEM Lab (Azure Activity + KQL Detections)
+Tools: Microsoft Sentinel, Azure Log Analytics, KQL (Kusto Query Language)
 
 
 
@@ -72,6 +72,12 @@ Repeated failed Azure control-plane actions may indicate:
 
 ### Azure Activity Log Ingestion
 ![Log Ingestion](./evidence/ingestion.png)
+
+## Threat Hunting (KQL)
+Hunting queries are included under `hunting/` to proactively identify suspicious Azure control-plane behavior:
+- Role/permission changes
+- Destructive actions (delete operations)
+- Admin activity bursts (automation/compromise signal)
 
 
 \## Disclaimer

@@ -1,0 +1,5 @@
+﻿AzureActivity
+| where TimeGenerated > ago(24h)
+| where OperationNameValue has_any ("role assignment", "roleAssignments", "roleDefinitions", "Microsoft.Authorization")
+| project TimeGenerated, Caller, OperationNameValue, ActivityStatusValue, ResourceGroup, ResourceId
+| sort by TimeGenerated desc
