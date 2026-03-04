@@ -51,6 +51,14 @@ This project demonstrates a hands-on Microsoft Sentinel SIEM lab: enabling Azure
 \- \*\*Real rule\*\*: detects repeated failed Azure operations within a short window
 
 
+## Evidence
+
+### Sentinel Incident Triggered
+![Incident Triggered](./evidence/incident-triggered.png)
+
+### Azure Activity Log Ingestion
+![Log Ingestion](./evidence/ingestion.png)
+
 
 \## Disclaimer
 
