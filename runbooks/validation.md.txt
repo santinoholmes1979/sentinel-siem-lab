@@ -1,0 +1,27 @@
+# Validation: Trigger and verify Sentinel incident
+
+## Goal
+Confirm the analytics rule generates alerts and incidents.
+
+## Steps
+
+1. Verify logs exist
+
+AzureActivity
+| take 20
+
+2. Generate Azure activity
+Open resources, browse the Activity Log, or perform basic portal actions.
+
+3. Wait for rule execution
+The rule runs every 5 minutes.
+
+4. Check Sentinel Incidents
+Navigate to:
+Microsoft Sentinel → Incidents
+
+## Evidence Captured
+
+- Incident triggered by analytic rule
+- Analytics rule configuration
+- Azure Activity ingestion confirmation

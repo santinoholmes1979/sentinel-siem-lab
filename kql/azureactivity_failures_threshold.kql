@@ -1,0 +1,4 @@
+﻿AzureActivity
+| where ActivityStatusValue == "Failure"
+| summarize FailureCount = count() by Caller, bin(TimeGenerated, 5m)
+| where FailureCount >= 3

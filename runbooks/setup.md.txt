@@ -1,0 +1,17 @@
+# Setup: Microsoft Sentinel + Azure Activity ingestion
+
+## Goal
+Enable Microsoft Sentinel and ingest Azure Activity logs into the workspace.
+
+## High-level steps
+1. Create or enable a Microsoft Sentinel workspace.
+2. Access Sentinel through the Microsoft Defender portal experience.
+3. Enable Azure Activity ingestion using the Azure Policy Assignment wizard.
+
+## Verify ingestion (Sentinel > Logs)
+
+AzureActivity
+| sort by TimeGenerated desc
+| take 20
+
+Expected result: recent records appear in the table.

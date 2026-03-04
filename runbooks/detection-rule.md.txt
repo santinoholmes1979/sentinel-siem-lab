@@ -1,0 +1,25 @@
+# Detection rule: Repeated Azure Activity failures (KQL)
+
+## Goal
+Create a scheduled analytics rule that detects repeated failed Azure operations.
+
+## Rule Query
+
+AzureActivity
+| where ActivityStatusValue == "Failure"
+| summarize FailureCount = count() by Caller, bin(TimeGenerated, 5m)
+| where FailureCount >= 3
+
+## Recommended Rule Settings
+
+Run query every: 5 minutes  
+Lookup data from last: 5 minutes  
+Create incidents from alerts: Enabled
+
+## Temporary Validation Query (used during testing)
+
+AzureActivity
+| summarize EventCount = count() by Caller, bin(TimeGenerated, 5m)
+| where EventCount >= 1
+
+Use this query temporarily to confirm the detection pipeline works, then revert to the failure threshold query.

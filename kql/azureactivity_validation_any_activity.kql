@@ -1,0 +1,3 @@
+﻿AzureActivity
+| summarize EventCount = count() by Caller, bin(TimeGenerated, 5m)
+| where EventCount >= 1
