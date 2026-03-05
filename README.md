@@ -6,7 +6,26 @@ Tools: Microsoft Sentinel, Azure Log Analytics, KQL (Kusto Query Language)
 
 This project demonstrates a hands-on Microsoft Sentinel SIEM lab: enabling Azure Activity log ingestion and building KQL-based analytics rules that generate incidents.
 
+```mermaid
+flowchart TD
 
+A[Azure Resources] --> B[Azure Activity Logs]
+
+B --> C[Diagnostic Settings / Azure Policy]
+
+C --> D[Log Analytics Workspace]
+
+D --> E[Microsoft Sentinel]
+
+E --> F[KQL Queries]
+
+F --> G[Analytics Rules]
+
+G --> H[Security Incidents]
+
+H --> I[SOC Investigation]
+```
+This architecture represents a simplified SIEM pipeline using Microsoft Sentinel. Azure Activity logs are ingested into a Log Analytics workspace, analyzed using KQL queries and analytics rules, and surfaced as incidents for SOC investigation.
 
 \## What I Built
 
